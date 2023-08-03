@@ -1,0 +1,114 @@
+<div class="video-container">
+ 
+<video src="../assets/home-video.mp4" autoplay loop></video>
+<div class="header">
+  <nav>
+    <a class="">LOGO</a>
+    <ul>
+      <li> <a (click)="activeHeader('home')" [ngClass]="{'active': select=='home'}">Ana Sayfa</a></li>
+      <li> <a (click)="activeHeader('project')" [ngClass]="{'active': select=='project'}">Projeler</a></li>
+      <li> <a (click)="activeHeader('about')" [ngClass]="{'active': select=='about'}">Hakkımızda</a></li>
+      <li> <a (click)="activeHeader('contect')" [ngClass]="{'active': select=='contect'}">İletişim</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="home-body">
+  <div class="flex-item">
+  <div class="item-1">
+<h1>EN İYİ İNŞAAT<p> UZMANLARI</p></h1>
+  <h5>Biz inşaat uzmanıyız çünkü sizin için bir ev inşa etmekten mutfağı
+    onarmaya kadar her şeyi yapabiliriz. seni bekliyor</h5>
+    <button class="home-btn">
+      Bize Ulaşın
+    </button>
+</div>
+<div>
+  <img src="../assets/body-image.svg"/>
+</div>
+</div>
+</div>
+</div>
+
+<div style="margin: 0px 250px;">
+<div class="card">
+  <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" >
+      <ng-template let-product pTemplate="item">
+          <div class="product-item">
+              <div class="product-item-content">
+                  <div class="mb-3">
+                      <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
+                  </div>
+                  <div>
+                      <h4 class="mb-1">{{ product.name }}</h4>
+                      <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                      <!-- <p-tag  >ÇANTA</p-tag> -->
+                      <div class="car-buttons mt-5">
+                          <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                          <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </ng-template>
+  </p-carousel>
+</div>
+</div>
+<!-- HOME- BODY -->
+<div class="container">
+  <div class="grid-item-2 animation-container">
+    <div class="div-1 left-element">
+    <img src="../assets/home-body-1" class="left-animation">
+    </div>
+    <div class="div-2 right-animation">
+    <h2> Hoş Geldiniz</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vitae tempus quam pellentesque nec nam aliquam sem et. Netus et Maleuada ist bekannt für AC Turpis. Feugiat in ante metus dictum.
+       In aliquam sem fringilla ut morbi tincidunt augue interdum velit. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. 
+       Adipiscing bei in tellus integer feugiat scelerisque varius. Leo Integer Maleuada Nunt Vel Risus Commodo Viverra Maecenas. Pharetra pharetra massa massa ultricies mi quis. 
+       Diam sitzen amet nisl suscipit.</p>
+      <div class="card-bottom"><a>Daha fazla detay </a> <i>→</i></div> 
+
+  </div>
+  </div>
+</div>
+<div class="about">
+<div class="container animation-container">
+    <h2 class="left-animation">Hakkımızda</h2>
+    <div class="flex-item-3 right-animation">
+      <div class="card-item ">
+        <h4 class="card-title">24</h4>
+        <p class="card-body">Şirket uzmanları</p>
+        <p class="card-bottom">Tüm çalışanlarımız uzun yıllara dayanan deneyime sahip yüksek nitelikli uzmanlardır.</p>
+      </div>
+      <div class="card-item">
+        <h4 class="card-title">4</h4>
+        <p class="card-body">Şirket uzmanları</p>
+        <p class="card-bottom">Tüm çalışanlarımız uzun yıllara dayanan deneyime sahip yüksek nitelikli uzmanlardır.</p>
+      </div>
+     
+      <div class="card-item ">
+        <h4 class="card-title">+70</h4>
+        <p class="card-body">Şirket uzmanları</p>
+        <p class="card-bottom">Tüm çalışanlarımız uzun yıllara dayanan deneyime sahip yüksek nitelikli uzmanlardır.</p>
+      </div>
+      
+    
+</div>
+</div>
+
+</div>
+<div class="contact">
+  <div class="container animation-container">
+    <div class="grid-item-2 animation-container">
+      <div class="div-1 left-element">
+
+      <h2 >Bize Ulaşın</h2>
+      <p class="card-bottom"> Formu doldurun, size en kısa sürede cevap vereceğiz.</p>
+      </div>
+</div>
+  </div>
+  
+  </div>
+
+
+<router-outlet></router-outlet>
