@@ -1,0 +1,13 @@
+<div class="header" >
+    <nav>
+      <a class=""><img class="navbar-logo" src="../../../assets/white-logo.png"></a>
+      <ul>
+        <li> <a routerLink="" (click)="activeHeader('home')" [ngClass]="{'active': select=='home'}">Ana Sayfa</a></li>
+        <li> <a routerLink="/project" (click)="activeHeader('project')" [ngClass]="{'active': select=='project'}">Projeler</a></li>
+        <li> <a (click)="activeHeader('about')" [ngClass]="{'active': select=='about'}">Hakkımızda</a></li>
+        <li> <a (click)="activeHeader('contect')" [ngClass]="{'active': select=='contect'}">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+
+

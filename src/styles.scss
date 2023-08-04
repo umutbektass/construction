@@ -2,6 +2,8 @@
 @import "primeng/resources/primeng.css";
 @import 'animate.css';
 
+@import url('https://fonts.cdnfonts.com/css/norwester');
+@import url('https://fonts.cdnfonts.com/css/ibm-plex-sans-3');
 *{
     margin: 0;
     padding: 0;
@@ -10,16 +12,140 @@
 //     overflow: hidden;
 // }
 .container{
-    margin: 0 17%;
+  position: relative;
+  margin: 5vw 14vw;
+  padding: 0px
+   3vw;
 }
-.grid-item-2{
+h2 {
+  position: relative;
+  margin: 20px 0px 80px 0px;
+  font-size: 2vw;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+}
+h2::after{
+  content: "";
+  margin-bottom:  -25px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width:4vw;
+  height: 3px;
+  background-color: #FF6B00;
+}
+p {
+  max-width: 460px;
+  margin: 30px 0;
+  line-height: 30px;
+  font-size: 17px;
+  color: #272727;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.card-bottom {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #272727;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+  }
+
+  i {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24px;
+    color: #272727;
+    margin: 0 10px;
+  }
+}
+
+
+.grid-2{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    column-gap: 2rem;
-}
-.grid-item-2 img{
-    width: 100%;
+    column-gap: 6rem;
+    img {
+      width: 100%;
     height: 500px;
     object-fit: cover;
-
+    }
+    
 }
+.d-flex{
+  display: flex;
+ 
+}
+input{
+  display: block;
+  width: 80%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: 1px solid black;
+}
+.card-item{
+    width: 100%;
+    
+    .card-title{
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      line-height: 10px;
+      color: #ff6b00;
+      font-size: 5vw;
+      margin: 4vw 0;
+    }
+    .card-body{
+      color: #272727;
+      font-size: 1.5vw;
+      font-family:"IBM Plex Sans", sans-serif;
+     font-size: 22px;
+      font-weight: 700;
+      margin: 30px 0;
+     
+    }
+    .card-bottom{
+      max-width: 300px;
+      line-height: 30px;
+      font-size: 0.9vw;
+      color: #272727;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 300;
+    }
+  }
+  .active {
+    padding: 10px 0;
+    border-bottom: 2px solid #FF6B00;
+  }
+  
+  .active2 {
+    animation: a3 1.4s ease;
+  }
+  @keyframes a3 {
+    from {
+      opacity: 0;
+      transform: translateY(45px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .active3 {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeIn 1.4s ease forwards;
+    animation-delay: 0.7s;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+

@@ -1,0 +1,192 @@
+.header-container {
+    position: relative;
+    z-index: -1;
+    top: -6rem;
+  }
+  
+  .header-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.17970938375350143) 0%, rgba(0, 0, 0, 0.36738445378151263) 12%, rgba(0, 0, 0, 0.5886729691876751) 59%, rgba(0, 0, 0, 0.700717787114846) 77%, rgba(0, 0, 0, 0.7595413165266106) 92%, rgba(0, 0, 0, 0.7511379551820728) 100%);
+  }
+  
+  .header-container video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  .home-body {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    // margin: 0 4rem;
+  
+    .flex-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 10%;
+  
+      .item-1 {
+        margin-left: 10vw;
+  
+        h1 {
+          font-family: 'Norwester', sans-serif;
+         
+          color: #FF6B00;
+          font-size: 3.5vw;
+          animation: fadeIn1 0.7s ease;
+        }
+        @keyframes fadeIn1 {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+  
+        h5 {
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: 300;
+          opacity: 0;
+          margin: 10% 0;
+          word-wrap: break-word;
+          width: 33vw;
+          color: #ffffff;
+          font-size: 1.2vw;
+          line-height: 2.2vw;
+         
+          animation: fadeIn2 0.7s ease forwards;
+          animation-delay: 0.7s;
+  
+        }
+        @keyframes fadeIn2 {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          
+          to {
+          
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+  
+        .home-btn {
+          word-spacing: 4px;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: 600;
+          line-height: 14px;
+          width: 16vw;
+          height: 12%;
+          background-color: transparent;
+          color: white;
+          border: 4px solid #FF6B00;
+          font-size: 1vw;
+          cursor: pointer;
+          opacity: 0;
+          transition: all 0.5s ease;
+          animation: fadeIn3 0.7s ease forwards;
+          animation-delay: 1.2s;
+        }
+        @keyframes fadeIn3 {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          
+          to {
+          
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+  
+        .home-btn:hover {
+          background-color: #FF6B00;
+        }
+      }
+  
+      img {
+        margin-top: 8vw;
+        width: 19vw;
+        opacity: 0;
+        animation:fadeInImg 1s ease forwards ;
+        animation-delay: 1.5s;
+      }
+      @keyframes fadeInImg {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        
+        to {
+        
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  .card-item{
+    width: 100%;
+    
+    .card-title{
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      line-height: 10px;
+      color: #ff6b00;
+      font-size: 5vw;
+      margin: 4vw 0;
+    }
+    .card-body{
+      color: #272727;
+      font-size: 1.5vw;
+      font-family:"IBM Plex Sans", sans-serif;
+     font-size: 22px;
+      font-weight: 700;
+      margin: 30px 0;
+     
+    }
+    .card-bottom{
+      max-width: 300px;
+      line-height: 30px;
+      font-size: 0.9vw;
+      color: #272727;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-weight: 300;
+    }
+  }
+  .about{
+    background-color: #F0F0F0;
+    padding: 3vw 0;
+  }
+
+  .contact-button{
+    width: 80%;
+    padding: 15px;
+    border: 3px solid #FF6B00;
+    font-family:"IBM Plex Sans", sans-serif; 
+    font-weight: 700;
+    font-size: 1vw;
+    letter-spacing: 0.3rem;
+    transition:all 0.2s ease;
+    &:hover{
+      background-color: #FF6B00;
+      color: #F0F0F0;
+    }
+  }

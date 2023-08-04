@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+  
+  
+    a {
+      color: white;
+      text-decoration: none;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 600;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 4rem;
+  
+      ul {
+        display: flex;
+  
+        li {
+          list-style: none;
+          margin: 0 2rem;
+  
+          a {
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    padding: 10px 0;
+    border-bottom: 2px solid #FF6B00;
+  }
+
+  .navbar-logo{
+    width: 6vw;
+  }

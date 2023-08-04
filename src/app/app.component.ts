@@ -32,8 +32,7 @@ export class AppComponent {
       if(this.revealTop<this.u - revealPoint){
         left_elemnt[index].classList.add('active2')
         right_element[index].classList.add('active3')
-      }
-     
+      }     
     //   else {
     //     reveals[index].classList.remove('active1');
     // }
