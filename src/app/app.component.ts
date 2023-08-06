@@ -22,6 +22,7 @@ export class AppComponent {
   onWindowScroll(event:any){
     this.scrollValue = window.scrollY;
     const reveals = document.querySelectorAll('.reveal');
+    const header = document.querySelector('.header');
     const left_elemnt = document.querySelectorAll('.left-animation');
     const right_element  = document.querySelectorAll('.right-animation');
     const animation_container = document.querySelectorAll('.animation-container')
@@ -39,6 +40,18 @@ export class AppComponent {
       
       
     }
+    const threshold = (this.u / 100) * 60;
+    // if(this.scrollValue>threshold){
+    //   header?.classList.add('navbar-fixed')
+    //   header?.classList.add('umut1')
+    // }  
+    if(this.scrollValue>1050){
+      header?.classList.add('navbar-fixed')
+    }  
+    else{
+      header?.classList.remove('navbar-fixed')
+    }
+   
   }
   
 

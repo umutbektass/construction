@@ -9,7 +9,7 @@
     padding: 0;
 }
 // body{
-//     overflow: hidden;
+//     overflow-y: hidden;
 // }
 .container{
   position: relative;
@@ -187,4 +187,21 @@ input{
     background-color: #FF6B00;
     color: #F0F0F0;
   }
+}
+
+
+.navbar-fixed{
+  transition: all 1s ease;
+  position: fixed !important;
+  bottom: 0 !important;
+  background-color: white;
+  a{
+    color: black !important;
+   }
+
+}
+.nav-top-margin{
+  width: 100%;
+  position: absolute;
+  top: 4rem;
 }
