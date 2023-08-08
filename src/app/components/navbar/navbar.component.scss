@@ -1,9 +1,10 @@
 .header {
     width: 100%;
-    position: absolute;
-    height: 4vw;
+    position: absolute ;
+    height: 4vh;
     top: 0rem;
     z-index: 1;
+   
   
     a {
       color: white;
@@ -40,4 +41,31 @@
 
   .navbar-logo{
     width: 6vw;
+  }
+  @media (max-width:991px){
+    .header{
+      nav{
+        justify-content:flex-start;
+      ul{
+        li{
+          margin: 0 .5rem;
+        }
+      }
+      }
+    }
+  }
+
+  @media (max-width:768px) {
+    .header{
+      nav{
+      flex-direction: column;
+      ul{
+        li{
+          margin: 0 .5rem;
+        }
+      }
+      }
+    }
+  
+  
   }

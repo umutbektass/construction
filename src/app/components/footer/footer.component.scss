@@ -41,3 +41,13 @@
         color:#ffffffbd ;
       }
   }
+
+  @media (max-width:991px){
+    .grid-footer{
+    grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (max-width:768px){
+    
+  
+  }

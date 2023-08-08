@@ -1,4 +1,4 @@
-import { Component ,HostListener} from '@angular/core';
+import { Component ,ElementRef,HostListener, ViewChild} from '@angular/core';
 import { CarouselService } from './carousel.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { CarouselService } from './carousel.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild('imageToChange') imageToChange!: ElementRef;
   title = 'construction';
   select:string="home";
-
+  imgUrl="../../../assets/white-logo.png"
+   check_navbar_fixed:boolean=false;
   constructor(private carouselService:CarouselService){}
   products:any[]=[]
   ngOnInit(){
@@ -45,12 +47,52 @@ export class AppComponent {
     //   header?.classList.add('navbar-fixed')
     //   header?.classList.add('umut1')
     // }  
+    
+    
     if(this.scrollValue>1050){
+     
       header?.classList.add('navbar-fixed')
+      header?.classList.remove('navbar-cancelled-fixed')
+      this.check_navbar_fixed = true
+     this.imageToChange.nativeElement.src="assets/logo-1.png"
+      
     }  
-    else{
+    // else if(this.scrollValue<700){
+      
+    //   header?.classList.remove('navbar-cancelled-fixed');
+      
+    // }  
+    else if( this.check_navbar_fixed&& this.scrollValue<1050){
+     
       header?.classList.remove('navbar-fixed')
+      header?.classList.add('navbar-cancelled-fixed');
+      setTimeout(() => {
+        header?.classList.remove('navbar-cancelled-fixed');
+        this.check_navbar_fixed =false
+        
+      }, 800);
+     
     }
+
+    
+   
+    
+    else{
+      
+      header?.classList.remove('navbar-fixed');
+      
+    }
+      
+     
+      
+
+     
+
+    // }
+
+    // console.log("u")
+    //  header?.classList.remove('navbar-fixed');
+    //  header?.classList.remove('navbar-cancelled-fixed');
    
   }
   

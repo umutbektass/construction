@@ -1,7 +1,7 @@
 .header-container {
     position: relative;
     z-index: -1;
-    top: -6rem;
+    top: -2vw;
   }
   
   .header-container::before {
@@ -18,8 +18,8 @@
   .header-container video {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
   
   }
@@ -32,10 +32,13 @@
     .flex-item {
       display: flex;
       justify-content: space-between;
-      margin: 0 10%;
+      margin: 0 5%;
   
       .item-1 {
-        margin-left: 10vw;
+       
+     
+        margin-left: 4vw;
+       
   
         h1 {
           font-family: 'Norwester', sans-serif;
@@ -63,10 +66,12 @@
           opacity: 0;
           margin: 10% 0;
           word-wrap: break-word;
-          width: 33vw;
+         width: 600px;
+         
+
           color: #ffffff;
-          font-size: 1.2vw;
-          line-height: 2.2vw;
+          font-size: 18px;
+          line-height: 2.5vw;
          
           animation: fadeIn2 0.7s ease forwards;
           animation-delay: 0.7s;
@@ -119,14 +124,19 @@
           background-color: #FF6B00;
         }
       }
-  
+  .item-2{
+      margin-top: 12vh;
       img {
-        margin-top: 8vw;
-        width: 19vw;
+       
+       
+     
+     width: 21vw;
+        
         opacity: 0;
         animation:fadeInImg 1s ease forwards ;
         animation-delay: 1.5s;
       }
+    }
       @keyframes fadeInImg {
         from {
           opacity: 0;
@@ -142,38 +152,79 @@
     }
   }
 
-  .card-item{
-    width: 100%;
+  // .card-item{
+  //   width: 100%;
     
-    .card-title{
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-weight: 700;
-      line-height: 10px;
-      color: #ff6b00;
-      font-size: 5vw;
-      margin: 4vw 0;
-    }
-    .card-body{
-      color: #272727;
-      font-size: 1.5vw;
-      font-family:"IBM Plex Sans", sans-serif;
-     font-size: 22px;
-      font-weight: 700;
-      margin: 30px 0;
+  //   .card-title{
+  //     font-family: 'IBM Plex Sans', sans-serif;
+  //     font-weight: 700;
+  //     line-height: 10px;
+  //     color: #ff6b00;
+  //     font-size: 5vw;
+  //     margin: 4vw 0;
+  //   }
+  //   .card-body{
+  //     color: #272727;
+  //     font-size: 1.5vw;
+  //     font-family:"IBM Plex Sans", sans-serif;
+  //    font-size: 22px;
+  //     font-weight: 700;
+  //     margin: 30px 0;
      
-    }
-    .card-bottom{
-      max-width: 300px;
-      line-height: 30px;
-      font-size: 0.9vw;
-      color: #272727;
-      font-family: "IBM Plex Sans", sans-serif;
-      font-weight: 300;
-    }
-  }
+  //   }
+  //   .card-bottom{
+  //     max-width: 300px;
+  //     line-height: 30px;
+  //     font-size: 0.9vw;
+  //     color: #272727;
+  //     font-family: "IBM Plex Sans", sans-serif;
+  //     font-weight: 300;
+  //   }
+  // }
   .about{
+    width: 100vw;
     background-color: #F0F0F0;
     padding: 3vw 0;
   }
 
+
+  @media (min-width:768px) and (max-width:1366px) {
+    .flex-item{
+      img{
+      //  width: 12vw;
+      display: none;
+      }
+     }
+    .item-1{
+      margin-left: 0px !important;
+     
+    }
+  }
+
+  @media (max-width:768px)  {
+    .home-body{
+      .flex-item{
+        .item-1{
+          h5{
+            width: 90vw;
+           }
+        }
+      }
+    }
+  
+    .item-1{
+      margin-left: 0px !important;
+    }
+   .flex-item{
+     img{
+      display: none;
+     }
+     .item-1{
+      margin-left: 0px !important;
+     h5{
+      width: 250px;
+     }
+    }
+    }
+  }
  

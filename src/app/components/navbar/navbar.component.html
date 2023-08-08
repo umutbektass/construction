@@ -1,7 +1,7 @@
 <div  class=" nav-top-margin">
 <div class="header" >
     <nav>
-      <a class=""><img class="navbar-logo" src="../../../assets/white-logo.png"></a>
+      <a class=""><img  class="navbar-logo" [src]="imgUrl"></a>
       <ul>
         <li> <a routerLink="" (click)="activeHeader('home')" [ngClass]="{'active': select=='home'}">Ana Sayfa</a></li>
         <li> <a routerLink="/project" (click)="activeHeader('project')" [ngClass]="{'active': select=='project'}">Projeler</a></li>

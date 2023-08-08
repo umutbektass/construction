@@ -44,27 +44,27 @@ p {
   font-weight: 300;
   font-style: normal;
 }
-.card-bottom {
-  display: flex;
-  align-items: center;
+// .card-bottom {
+//   display: flex;
+//   align-items: center;
 
-  a {
-    color: #272727;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+//   a {
+//     color: #272727;
+//     font-family: 'IBM Plex Sans', sans-serif;
+//     font-weight: 600;
+//     font-size: 16px;
 
-  }
+//   }
 
-  i {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 24px;
-    color: #272727;
-    margin: 0 10px;
-  }
-}
+//   i {
+//     font-family: 'IBM Plex Sans', sans-serif;
+//     font-weight: 500;
+//     font-size: 25px;
+//     line-height: 24px;
+//     color: #272727;
+//     margin: 0 10px;
+//   }
+// }
 
 
 .grid-2{
@@ -190,18 +190,110 @@ input{
 }
 
 
-.navbar-fixed{
-  transition: all 1s ease;
+.navbar-fixed {
+ 
   position: fixed !important;
-  bottom: 0 !important;
-  background-color: white;
-  a{
-    color: black !important;
-   }
-
+  // top: 0px !important;
+  transform: translateY(-70px);
+  height: 0 ;
+   animation: a7 0.5s ease forwards;
+ 
+  border-bottom: 1px solid #9e9fa55d;
 }
+
+.navbar-fixed a {
+  color: black !important;
+}
+ .navbar-cancelled-fixed { 
+ animation:  a8 0.8s ease forwards ;
+ transform: translateY(0px);
+ position: fixed !important;
+ height: 4vw;
+}
+
+
+
+@keyframes a7 {
+  to {
+    transform: translateY(0px);
+    height: 4vw ;
+    background-color: white;
+  }
+}
+@keyframes a8{
+ 
+    
+  to {
+    height: 0vw !important;
+    background-color: white;
+     transform: translateY(-86px);
+   border-bottom: 1px solid #9e9fa55d;
+   
+  }
+}
+
 .nav-top-margin{
   width: 100%;
   position: absolute;
-  top: 4rem;
+  top: 4vw;
 }
+@media (max-width:1366px){
+  .container{
+    margin: 5vw 4vw;
+   
+  }
+}
+@media (max-width:991px){
+  .container{
+  .card-item{
+    .card-title{
+      font-size: 7vw;
+    }
+  }
+}
+  h2{
+    font-size: 6.5vw;
+  }
+  .grid-2{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   
+    p{
+      max-width: none;
+    }
+  }
+  .contact-button{
+    font-size: 2.4vw;
+   
+  }
+  input{
+    width: 50%;
+  }
+}
+@media (max-width:768px){
+  .container{
+    margin: 5vw 8vw;
+  }
+  .d-flex{
+    flex-direction: column;
+  }
+  .card-item{
+    .card-title{
+      width: 3.4vw;
+    }
+    .card-bottom{
+      max-width: none;
+      font-size: 2.5vw;
+    }
+  }
+  .contact-button{
+    font-size: 2.4vw;
+    width: 100%;
+    
+  }
+  input{
+    width: 100%;
+  }
+
+}
+
